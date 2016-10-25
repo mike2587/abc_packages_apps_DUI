@@ -282,7 +282,7 @@ public class FadingBlockRenderer extends Renderer implements ColorAnimator.Color
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                 Math.max(min, Math.min(max, val)), res.getDisplayMetrics());
     }
-    
+
     private static int validateDivision(int val) {
         // if a bad value was passed from settings (not divisible by 2)
         // reset to default value of 16. Validate range.

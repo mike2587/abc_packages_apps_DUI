@@ -493,10 +493,8 @@ public abstract class BaseNavigationBar extends LinearLayout implements Navigato
             setBackground(getContext().getDrawable(R.drawable.system_bar_background));
         }
 
-//        addBatteryBarLayout(mRot0);
         mRot0.addView(rot0NavButton);
 
-//        addBatteryBarLayout(mRot90);
         mRot90.addView(rot90NavButton);
 
         addView(mRot0);
@@ -508,24 +506,7 @@ public abstract class BaseNavigationBar extends LinearLayout implements Navigato
         mRotatedViews[Surface.ROTATION_270] = mRotatedViews[Surface.ROTATION_90];
         mCurrentView = mRotatedViews[Surface.ROTATION_0];
     }
-/*
-    private void addBatteryBarLayout(ViewGroup parent) {
-        int which = -1;
-        if (parent.equals(mRot0)) {
-            which = R.layout.battery_bar_rot0;
-        } else if (parent.equals(mRot90)) {
-            which = R.layout.battery_bar_rot90;
-        } else {
-            return;
-        }
-        try {
-            View bar = View.inflate(getContext(), which, null);
-            parent.addView(bar);
-        } catch (Exception e) {
-            Log.e(TAG, "BatteryBarController failed to inflate");
-        }
-    }
-*/
+
     protected void setVisibleOrGone(View view, boolean visible) {
         if (view != null) {
             view.setVisibility(visible ? VISIBLE : GONE);

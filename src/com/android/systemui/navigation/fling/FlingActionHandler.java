@@ -220,6 +220,6 @@ public class FlingActionHandler implements Swipeable, SmartObservable {
 
     @Override
     public void onChange(Uri uri) {
-        loadConfigs();        
+        loadConfigs();
     }
 }

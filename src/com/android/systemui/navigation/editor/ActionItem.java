@@ -14,7 +14,7 @@ public class ActionItem {
     private int actionId = -1;
     private boolean selected;
     private boolean sticky;
-    
+
     /**
      * Constructor
      * 
@@ -27,14 +27,14 @@ public class ActionItem {
         this.icon = icon;
         this.actionId = actionId;
     }
-    
+
     /**
      * Constructor
      */
     public ActionItem() {
         this(-1, null, null);
     }
-    
+
     /**
      * Constructor
      * 
@@ -44,7 +44,7 @@ public class ActionItem {
     public ActionItem(int actionId, String title) {
         this(actionId, title, null);
     }
-    
+
     /**
      * Constructor
      * 
@@ -53,7 +53,7 @@ public class ActionItem {
     public ActionItem(Drawable icon) {
         this(-1, null, icon);
     }
-    
+
     /**
      * Constructor
      * 
@@ -63,7 +63,7 @@ public class ActionItem {
     public ActionItem(int actionId, Drawable icon) {
         this(actionId, null, icon);
     }
-    
+
     /**
      * Set action title
      * 
@@ -72,7 +72,7 @@ public class ActionItem {
     public void setTitle(String title) {
         this.title = title;
     }
-    
+
     /**
      * Get action title
      * 
@@ -81,7 +81,7 @@ public class ActionItem {
     public String getTitle() {
         return this.title;
     }
-    
+
     /**
      * Set action icon
      * 
@@ -90,7 +90,7 @@ public class ActionItem {
     public void setIcon(Drawable icon) {
         this.icon = icon;
     }
-    
+
     /**
      * Get action icon
      * @return  {@link Drawable} action icon
@@ -98,7 +98,7 @@ public class ActionItem {
     public Drawable getIcon() {
         return this.icon;
     }
-    
+
      /**
      * Set action id
      * 
@@ -107,14 +107,14 @@ public class ActionItem {
     public void setActionId(int actionId) {
         this.actionId = actionId;
     }
-    
+
     /**
      * @return  Our action id
      */
     public int getActionId() {
         return actionId;
     }
-    
+
     /**
      * Set sticky status of button
      * 
@@ -123,14 +123,14 @@ public class ActionItem {
     public void setSticky(boolean sticky) {
         this.sticky = sticky;
     }
-    
+
     /**
      * @return  true if button is sticky, menu stays visible after press
      */
     public boolean isSticky() {
         return sticky;
     }
-    
+
     /**
      * Set selected flag;
      * 
@@ -139,7 +139,7 @@ public class ActionItem {
     public void setSelected(boolean selected) {
         this.selected = selected;
     }
-    
+
     /**
      * Check if item is selected
      * 
@@ -157,7 +157,7 @@ public class ActionItem {
     public void setThumb(Bitmap thumb) {
         this.thumb = thumb;
     }
-    
+
     /**
      * Get thumb image
      * 

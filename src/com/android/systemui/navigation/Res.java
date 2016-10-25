@@ -21,7 +21,7 @@
 package com.android.systemui.navigation;
 
 public class Res {
-    
+
     public static final class Common {
         public static final String LIGHTS_OUT = "lights_out";
         public static final String LIGHTS_OUT_LARGE = "ic_sysbar_lights_out_dot_large";
@@ -74,7 +74,7 @@ public class Res {
     }
 
     public static final class Fling {
-        
+
     }
 
 }

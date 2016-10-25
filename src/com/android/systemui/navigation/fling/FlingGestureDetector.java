@@ -269,11 +269,9 @@ public class FlingGestureDetector {
             case SHOW_PRESS:
                 mListener.onShowPress(mCurrentDownEvent);
                 break;
-                
             case LONG_PRESS:
                 dispatchLongPress();
                 break;
-                
             case TAP:
                 // If the user's finger is still down, do not count it as a tap
                 if (mDoubleTapListener != null) {
@@ -353,7 +351,7 @@ public class FlingGestureDetector {
         }
         init(context);
     }
-    
+
     /**
      * Creates a GestureDetector with the supplied listener that runs deferred events on the
      * thread associated with the supplied {@link android.os.Handler}.
@@ -565,7 +563,7 @@ public class FlingGestureDetector {
             mStillDown = true;
             mInLongPress = false;
             mDeferConfirmSingleTap = false;
-            
+
             if (mIsLongpressEnabled) {
                 mHandler.removeMessages(LONG_PRESS);
                 mHandler.sendEmptyMessageAtTime(LONG_PRESS, mCurrentDownEvent.getDownTime()

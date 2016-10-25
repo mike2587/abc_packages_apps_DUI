@@ -6,7 +6,7 @@
 	android:clickable="true"
 	android:focusable="true"
 	android:background="@drawable/action_item_btn">
-        	
+
 	<ImageView
 		android:id="@+id/iv_icon" 
 		android:layout_width="32dp" 
@@ -22,5 +22,5 @@
 		android:paddingRight="10dp"
 		android:textSize="18dp"
 		android:textColor="@color/smartbar_editor_popup_text"/>
-									         
-</LinearLayout>         
+
+</LinearLayout>

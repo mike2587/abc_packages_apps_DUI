@@ -4,7 +4,6 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     >
-	    
 
 	<ScrollView
 	    android:id="@+id/scroller"
@@ -14,7 +13,7 @@
 	    android:background="@color/smartbar_editor_popup_background"
 	    android:fadingEdgeLength="5dip"
 	    android:scrollbars="none" >
-        
+
     	<LinearLayout
 	    	android:id="@+id/tracks"
 	    	android:orientation="vertical"
@@ -22,7 +21,7 @@
 	        android:layout_height="wrap_content"
 	        android:layout_weight="1"
 	        android:padding="10dip"/>
-       
+
 	</ScrollView >
  	
  	<ImageView
@@ -30,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/arrow_up" />
-        
+
  	<ImageView
         android:id="@+id/arrow_down"
         android:layout_width="wrap_content"
