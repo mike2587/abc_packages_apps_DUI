@@ -73,4 +73,7 @@
     <!-- App killed message -->
     <string name="app_killed_message">%s killed</string>
 
+    <!-- Too big image warning -->
+    <string name="too_big_img">Image can\'t be bigger than 640x640px</string>
+
 </resources>
