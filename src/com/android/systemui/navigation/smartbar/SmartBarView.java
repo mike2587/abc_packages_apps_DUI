@@ -315,7 +315,7 @@ public class SmartBarView extends BaseNavigationBar {
         mNavigationIconHints = hints;
         getBackButtonIcon().setImeVisible(backAlt);
 
-        final boolean showImeButton = ((hints & StatusBarManager.NAVIGATION_HINT_IME_SHOWN) != 0);
+        final boolean showImeButton = /*(*/(hints /*& StatusBarManager.NAVIGATION_HINT_IME_SHOWN)*/ != 0);
         switch(mImeHintMode) {
             case IME_HINT_MODE_HIDDEN: // always hidden
                 getImeSwitchButton().setVisibility(View.INVISIBLE);
@@ -443,7 +443,7 @@ public class SmartBarView extends BaseNavigationBar {
 
         // Only show Menu if IME switcher not shown.
         final boolean shouldShow = mShowMenu &&
-                ((mNavigationIconHints & StatusBarManager.NAVIGATION_HINT_IME_SHOWN) == 0);
+                /*(*/(mNavigationIconHints == 0 /*& StatusBarManager.NAVIGATION_HINT_IME_SHOWN) == 0*/);
         getMenuButton().setVisibility(shouldShow ? View.VISIBLE : View.INVISIBLE);
     }
 
