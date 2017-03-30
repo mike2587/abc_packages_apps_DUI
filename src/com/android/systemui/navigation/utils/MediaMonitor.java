@@ -120,14 +120,16 @@ public abstract class MediaMonitor implements MediaSessionManager.OnActiveSessio
 
                 @Override
                 public void onPlaybackStateChanged(@NonNull PlaybackState state) {
-                    mIsPlaying = state.getState() == PlaybackState.STATE_PLAYING;
+                    mIsPlaying = (state.getState() == PlaybackState.STATE_PLAYING
+                            || state.getState() == PlaybackState.STATE_BUFFERING);
                     checkIfPlaying();
                 }
             };
             controller.registerCallback(mCallback);
 
             mIsPlaying = controller.getPlaybackState() != null
-                    && controller.getPlaybackState().getState() == PlaybackState.STATE_PLAYING;
+                    && (controller.getPlaybackState().getState() == PlaybackState.STATE_PLAYING
+                    || controller.getPlaybackState().getState() == PlaybackState.STATE_BUFFERING);
         }
 
         public boolean isPlaying() {
@@ -151,8 +153,8 @@ public abstract class MediaMonitor implements MediaSessionManager.OnActiveSessio
         List<MediaController> activeSessions = mMediaSessionManager.getActiveSessions(null);
         for (MediaController activeSession : activeSessions) {
             PlaybackState playbackState = activeSession.getPlaybackState();
-            if (playbackState != null && playbackState.getState()
-                    == PlaybackState.STATE_PLAYING) {
+            if (playbackState != null && (playbackState.getState()
+                    == PlaybackState.STATE_PLAYING || playbackState.getState() == PlaybackState.STATE_BUFFERING)) {
                 return true;
             }
         }
