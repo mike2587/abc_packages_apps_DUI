@@ -80,11 +80,7 @@ public class FlingActionHandler implements Swipeable, SmartObservable {
             ActionConfig action = button.getActionConfig(entry.getValue().action);
             mActionMap.put(entry.getKey(), action);
         }
-        isDoubleTapEnabled = !((ActionConfig) mActionMap
-                .get(ActionConstants.Fling.DOUBLE_LEFT_TAP_TAG))
-                .hasNoAction()
-                || !((ActionConfig) mActionMap.get(ActionConstants.Fling.DOUBLE_RIGHT_TAP_TAG))
-                        .hasNoAction();
+        setDoubleTapEnabled();
     }
 
     public void setKeyguardShowing(boolean showing) {
@@ -172,6 +168,15 @@ public class FlingActionHandler implements Swipeable, SmartObservable {
 
     protected void setImeActions(boolean isBackAlt) {
         mIsBackAlt = isBackAlt;
+        setDoubleTapEnabled();
+    }
+
+    private void setDoubleTapEnabled() {
+        isDoubleTapEnabled = mIsBackAlt || !((ActionConfig) mActionMap
+                .get(ActionConstants.Fling.DOUBLE_LEFT_TAP_TAG))
+                .hasNoAction()
+                || !((ActionConfig) mActionMap.get(ActionConstants.Fling.DOUBLE_RIGHT_TAP_TAG))
+                        .hasNoAction();
     }
 
     @Override
