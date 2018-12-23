@@ -83,7 +83,7 @@ public class FadingBlockRenderer extends Renderer implements ColorAnimator.Color
         mFadePaint.setColor(Color.argb(200, 255, 255, 255));
         mFadePaint.setXfermode(new PorterDuffXfermode(Mode.MULTIPLY));
         mMatrix = new Matrix();
-        mDbFuzz = mContext.getResources().getInteger(R.integer.config_pulseDbFuzz);
+        mDbFuzz = 2;
         mObserver.updateSettings();
         mPaint.setAntiAlias(true);
         onSizeChanged(0, 0, 0, 0);
@@ -252,7 +252,7 @@ public class FadingBlockRenderer extends Renderer implements ColorAnimator.Color
 
             mUserColor = Settings.System.getIntForUser(resolver,
                     Settings.System.FLING_PULSE_COLOR,
-                    mContext.getResources().getColor(R.color.config_pulseFillColor),
+                    Color.WHITE,
                     UserHandle.USER_CURRENT);
             if (!mLavaLampEnabled) {
                 int lastColor = mController.getAlbumArtColor();
